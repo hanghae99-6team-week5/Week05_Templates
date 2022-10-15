@@ -1,0 +1,122 @@
+server:
+  port: 8443
+
+spring:
+  datasource:
+    username: plo1514
+    url: jdbc:mysql://spring.ciuknxq8ffsl.ap-northeast-2.rds.amazonaws.com:3306/ploDB
+    password: In15141517!
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: false
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+      hiddenmethod:
+        filter:
+          enabled: 'true'
+
+jwt:
+  header: Authorization
+  refresh-token-validity-in-seconds: '14400'
+  access-token-validity-in-seconds: '14400'
+  secret: SEg5OS1ncm91cDctYWN0dWFscHJvamVjdC1yaW5nc3AtYm9vdC1qd3Qtc2VjcmV0LWtleS1ISDk5LWdyb3VwNy1hY3R1YWxwcm9qZWN0LXJpbmdzcC1ib290LWp3dC1zZWNyZXQta2V5
+
+#cloud:
+#  aws:
+#    credentials:
+#      #aws access-key
+#      access-key: AKIARVCCB2KY6MOGZB6I
+#      #aws secret-key
+#      secret-key: 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
+#      #aws region (서울)
+#    region:
+#      static: ap-northeast-2
+#      #버킷 이름
+#    s3:
+#      bucket: voicechatdear
+#    stack:
+#      auto: false
+## Actuator
+#management:
+#  endpoint:
+#    metrics:
+#      enabled: true
+#    prometheus:
+#      enabled: true
+#
+#  endpoints:
+#    web:
+#      base-path: /actuator
+#      exposure:
+#        include: health, info, metrics, prometheus
+#  metrics:
+#    tags:
+#      application: Hh99ActualProjectApplication
+#
+#
+#jwt:
+#  header: Authorization
+#  refresh-token-validity-in-seconds: '14400'
+#  access-token-validity-in-seconds: '14400'
+#  secret: SEg5OS1ncm91cDctYWN0dWFscHJvamVjdC1yaW5nc3AtYm9vdC1qd3Qtc2VjcmV0LWtleS1ISDk5LWdyb3VwNy1hY3R1YWxwcm9qZWN0LXJpbmdzcC1ib290LWp3dC1zZWNyZXQta2V5
+#kakao:
+#  access-token:
+#    client-secret: qgBzl1g2zRHKGOk4W7cg3ClMYehxiKN9
+#    redirect-uri: https://dear-mylove.com/user/kakao/callback
+#    client-id: 0b247f740bb6c38bd217e1a4563efe2d
+#openvidu:
+#  secret: DEARVIDU
+#  url: https://plotest.click/
+#
+#logging:
+#  level:
+#    org:
+#      hibernate:
+#        type:
+#          descriptor:
+#            sql: TRACE
+#redis:
+#  lettuce:
+#    pool:
+#      max-active: 10
+#      max-idle: 10
+#      min-idle: 2
+#      port: 6379
+#      host: localhost
+
+#      port: 6379
+#      host: dearredisdb.8eraeb.ng.0001.apn2.cache.amazonaws.com
+
+
+
+
+
+#spring:
+#  # DB 연결
+#  datasource:
+#    # 설치된 H2 DB와 연결 URL
+#    url: jdbc:h2:tcp://localhost/~/test
+#    # 접속을 위한 드라이버
+#    driver-class-name: org.h2.Driver
+#    # springboot 2.4 부터는 username이 꼭 있어야합니다. 없으면 에러가 발생합니다.
+#    username: sa
+#  jpa:
+#    # JPA가 수행하는 SQL을 볼 수 있다.
+#    show-sql: true
+#    # 객체를 보고 자동으로 테이블 생성 여부. 생성 - create, 비생성 - none
+#    # 테스트이기 때문에 create로 설정하며
+#    # 실제로는 none 으로 합니다. create이면 기존의 테이블을 전부 밀어버립니다.
+#    hibernate:
+#      ddl-auto: create
+#  # 콘솔 확인 을 위한 always
+#  output:
+#    ansi:
+#      enabled: always
+## 파라미터 확인을 위한 trace
+#logging:
+#  level:
+#    org.hibernate.type: trace
+
+
